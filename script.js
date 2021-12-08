@@ -34,6 +34,10 @@ let book2chapter1 = book2.querySelectorAll("ul>li")[3];
 let book2chapter2 = book2.querySelectorAll("ul>li")[6];
 let book2chapter3 = book2.querySelectorAll("ul>li")[8];
 
+book2chapter1.insertAdjacentElement('afterend',book2chapter2);
+book2chapter2.insertAdjacentElement('afterend',book2chapter3);
+book2additionB.insertAdjacentElement('afterend',book2additionC);
+
 let book6chapter7 = book6.querySelectorAll("ul>li")[8];
 let book6chapter8 = document.createElement("li");
 book6chapter8.innerText = "Глава 8: За пределами ES6";
