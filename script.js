@@ -1,5 +1,6 @@
 let btn = document.getElementById("btn");
 let inputText = document.querySelector("[type=text]");
+let square = document.getElementById("square");
 
 let eBtn = document.getElementById("e_btn");
 
@@ -8,7 +9,7 @@ let spanRange = document.getElementById("range-span");
 let circle = document.getElementById("circle");
 
 btn.addEventListener('click', function() {
-    btn.style.backgroundColor = inputText.value;
+    square.style.backgroundColor = inputText.value;
     inputText.value = "";
 });
 
