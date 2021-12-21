@@ -4,14 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Ninth complicated lesson</title>
+    <style>
+        body
+        {background-image: url(bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover; }
+        .snow {
+            position: absolute;
+        }
+        .pause {
+            margin-left: 100px;
+        }
+    </style>
 </head>
 <body>
-    <span>Введите текст</span><br>
-    <input class="add-text" type="text"><br>
-    <span>Получите текст</span><br>
-    <p class="show-text"></p>
+    <img class="snow" src="snowflake.png" alt="snowlake" width="70">
+    
+    <button class="pause">Play/Pause</button>
+    <button class="reset">Reset</button>
     <script src="./script.js"></script>
 </body>
 </html>

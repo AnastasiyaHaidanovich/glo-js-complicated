@@ -1,14 +1,35 @@
-const addText = document.querySelector(".add-text");
-const showText = document.querySelector(".show-text");
+const snow = document.querySelector(".snow");
+const pause = document.querySelector(".pause");
+const reset = document.querySelector(".reset");
 
-function debounce() {
-    addText.addEventListener('change', () => {
-        showText.textContent = "";
-        const showTextFunc = () => {
-            showText.textContent = addText.value;
-            addText.value = "";
-        };
-        setTimeout(showTextFunc, 300);
+let active = false;
+let count = 0;
+let idInterval;
+
+const snowAnimate = () => {
+    count++;
+    idInterval = requestAnimationFrame(snowAnimate);
+
+    if (count < 500) {
+        snow.style.top = count + "px";
+    } else {
+        cancelAnimationFrame(idInterval);
+    }
+};
+
+pause.addEventListener('click', () => {
+    if (active) {
+        cancelAnimationFrame(idInterval);
+        active = false;
+    } else {
+        idInterval = requestAnimationFrame(snowAnimate);
+        active = true;
+    }
 });
-}
-debounce();
+
+reset.addEventListener('click', () => {
+    count = 0;
+    snow.style.top = count + "px";
+    cancelAnimationFrame(idInterval);
+    active = false;
+});
