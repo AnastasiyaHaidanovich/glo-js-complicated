@@ -1,0 +1,18 @@
+p {
+    border-radius: 10px;
+    width: 250px;
+    padding: 15px;
+    min-height: 50px;
+    background-color: rgba(187, 137, 235, 0.3);
+}
+input {
+    margin: 20px 0;
+    border: none;
+    min-width: 250px;
+    outline: none;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: rgba(187, 137, 235, 0.3);
+
+}
